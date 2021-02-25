@@ -1,15 +1,11 @@
-function Interceptors() {
-
-    this.request = {
-        use: function (params) {
-            console.log(params)
-            return params
-        }
-    }
-
-  
+function InterceptorManager() {
+    this.handlers = [];
 }
-  
-const interceptors = new Interceptors();
-  
-export default interceptors;
+
+InterceptorManager.prototype.use = function use(fn) {
+    this.handlers.push(fn);
+    console.log(fn)
+    return this.handlers;
+};
+
+export default InterceptorManager;

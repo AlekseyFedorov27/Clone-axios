@@ -1,4 +1,7 @@
 function Instance() {
+  this.baseURL=''
+  this.headers=''
+
   this.set = ({baseURL = "", headers = ''}) => {
     this.baseURL = baseURL
     this.headers = headers
@@ -7,6 +10,7 @@ function Instance() {
         headers
     };
   };
+ 
 }
 
 const instanceAxios = new Instance();

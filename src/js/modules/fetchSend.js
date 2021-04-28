@@ -21,17 +21,10 @@ function RequestData() {
             xhr.setRequestHeader(content, type); 
 
 
-
-
-
-
             xhr.addEventListener("load", () => {
               resolve(JSON.parse(xhr.responseText));
             });
       
-
-
-
             
             xhr.addEventListener("error", () => {
       
@@ -45,7 +38,7 @@ function RequestData() {
             });
             
             xhr.send(data);
-            // console.error(xhr, 'jjjjjjjjjj')
+
           });
       
           return promise;
